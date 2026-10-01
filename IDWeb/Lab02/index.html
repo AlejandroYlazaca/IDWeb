@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro - Sistema Académico</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <main class="card-container">
+    <h2>Registro de Nuevos Estudiantes</h2>
+    <p class="subtitle">Sistema de Gestión Académica</p>
+
+    <form action="/procesar" method="POST" class="academic-form">
+
+      <fieldset>
+        <legend>Información Personal</legend>
+
+        <div class="form-group">
+          <label for="codigo">Código de Estudiante:</label>
+          <input 
+            type="text" 
+            id="codigo" 
+            name="codigo" 
+            class="form-input" 
+            required 
+            pattern="[0-9]{8}" 
+            placeholder="Ej. 12345678"
+            title="El código debe contener exactamente 8 números"
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="nombre">Nombre Completo:</label>
+          <input type="text" id="nombre" name="nombre" class="form-input" required placeholder="Nombres y Apellidos">
+        </div>
+
+        <div class="form-group">
+          <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+          <input 
+            type="date" 
+            id="fechaNacimiento" 
+            name="fechaNacimiento" 
+            class="form-input" 
+            required 
+            min="1950-01-01" 
+            max="2008-12-31"
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="carrera">Carrera Profesional:</label>
+          <select id="carrera" name="carrera" class="form-input" required>
+            <option value="" disabled selected>-- Seleccione una carrera --</option>
+            <option value="sistemas">Ingeniería de Sistemas</option>
+            <option value="software">Ingeniería de Software</option>
+            <option value="industrial">Ingeniería Industrial</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Turno de Estudio:</label>
+          <div class="options-group">
+            <label><input type="radio" name="turno" value="mañana" required> Mañana</label>
+            <label><input type="radio" name="turno" value="tarde"> Tarde</label>
+            <label><input type="radio" name="turno" value="noche"> Noche</label>
+          </div>
+        </div>
+      </fieldset>
+
+
+      <fieldset>
+        <legend>Información de la Cuenta</legend>
+
+        <div class="form-group">
+          <label for="email">Correo Institucional:</label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            class="form-input" 
+            required 
+            placeholder="usuario@universidad.edu.pe"
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="password">Contraseña:</label>
+          <input 
+            type="password" 
+            id="password" 
+            name="password" 
+            class="form-input" 
+            required 
+            pattern="(?=.*\d)(?=.*[A-Z]).{8,}"
+            title="Debe tener al menos 8 caracteres, una letra mayúscula y un número"
+            placeholder="••••••••"
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="comentarios">Comentarios o Observaciones:</label>
+          <textarea id="comentarios" name="comentarios" class="form-input" rows="3" placeholder="Escriba algún detalle adicional..."></textarea>
+        </div>
+
+        <div class="form-group checkbox-group">
+          <label for="terminos">
+            <input type="checkbox" id="terminos" name="terminos" required> 
+            Acepto los términos y condiciones de la institución.
+          </label>
+        </div>
+      </fieldset>
+      <div class="form-actions">
+        <button type="submit" class="btn-submit">Registrar Estudiante</button>
+      </div>
+    </form>
+  </main>d
+</body>
+</html>
