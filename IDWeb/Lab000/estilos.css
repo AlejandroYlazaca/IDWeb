@@ -1,0 +1,35 @@
+h1 {
+  color: rgb(194, 118, 118);
+  text-align: center;
+}
+h2 {
+  color: rgb(104, 124, 167);
+  text-align: center;
+}
+
+h3 {
+  color: rgb(160, 40, 48);
+  text-align: center;
+}
+
+h4 {
+  color: rgb(148, 167, 104);
+  text-align: center;
+}
+
+h5 {
+  color: rgb(79, 174, 60);
+  text-align: center;
+}
+
+h6 {
+  color: rgb(181, 14, 153);
+  text-align: center;
+}
+
+p {
+  font-family: "Times New Roman", Times, serif;
+  color: rgb(59, 0, 127);
+  font-size: 20px;
+  text-align: center;
+}
