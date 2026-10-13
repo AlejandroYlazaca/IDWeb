@@ -1,0 +1,12 @@
+{
+  "name": "laboratorio06",
+  "version": "1.0.0",
+  "description": "API RESTful para la gestion de cursos academicos",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^5.3.0"
+  }
+}
